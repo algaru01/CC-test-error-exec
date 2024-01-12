@@ -1,8 +1,8 @@
 package main
 
-import "log"
+import "fmt"
 
 func main() {
 	res := 2 + 2
-	log.Println(res)
+	fmt.Println(res)
 }
