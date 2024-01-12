@@ -1,8 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"example/pkg/arythmetic"
+	"example/pkg/models"
+)
 
 func main() {
-	res := 2 + 2
-	fmt.Println(res)
+	a := models.Number{
+		N: 1,
+	}
+
+	b := models.Number{
+		N: 2,
+	}
+
+	c := arythmetic.Sum(a, b)
+
+	println("Result is:", c.N)
 }
