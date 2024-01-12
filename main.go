@@ -4,6 +4,7 @@ import (
 	"example/pkg/arythmetic"
 	"example/pkg/models"
 	"fmt"
+	"time"
 
 	"github.com/google/uuid"
 )
@@ -23,4 +24,8 @@ func main() {
 
 	fmt.Println("Result is:", c.N)
 	println("ID is:", id.String())
+
+	time.Sleep(10 * time.Second)
+
+	fmt.Println("me voy")
 }
