@@ -3,7 +3,9 @@ package main
 import (
 	"example/pkg/arythmetic"
 	"example/pkg/models"
-	// "github.com/google/uuid"
+	"fmt"
+
+	"github.com/google/uuid"
 )
 
 func main() {
@@ -17,8 +19,8 @@ func main() {
 
 	c := arythmetic.Sum(a, b)
 
-	// id := uuid.New()
+	id := uuid.New()
 
-	println("Result is:", c.N)
-	// println("ID is:", id.String())
+	fmt.Println("Result is:", c.N)
+	println("ID is:", id.String())
 }
