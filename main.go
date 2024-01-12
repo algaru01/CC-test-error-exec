@@ -3,6 +3,8 @@ package main
 import (
 	"example/pkg/arythmetic"
 	"example/pkg/models"
+
+	_ "github.com/gorilla/mux"
 )
 
 func main() {
