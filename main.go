@@ -4,7 +4,7 @@ import (
 	"example/pkg/arythmetic"
 	"example/pkg/models"
 
-	_ "github.com/gorilla/mux"
+	"github.com/google/uuid"
 )
 
 func main() {
@@ -18,5 +18,8 @@ func main() {
 
 	c := arythmetic.Sum(a, b)
 
+	id := uuid.New()
+
 	println("Result is:", c.N)
+	println("ID is:", id.String())
 }
