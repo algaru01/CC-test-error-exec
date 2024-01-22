@@ -5,18 +5,36 @@ import (
 	"example/pkg/models"
 	"fmt"
 	"os"
+	"strconv"
 	"time"
 
 	"github.com/google/uuid"
 )
 
 func main() {
+
+	if len(os.Args) != 3 {
+		fmt.Println("Usage: program <int> <int>")
+		os.Exit(1)
+	}
+
+	num1, err := strconv.Atoi(os.Args[1])
+	if err != nil {
+		fmt.Println("Error: Number 1 is not an int")
+		os.Exit(1)
+	}
+	num2, err := strconv.Atoi(os.Args[2])
+	if err != nil {
+		fmt.Println("Error: Number 2 is not an int")
+		os.Exit(1)
+	}
+
 	a := models.Number{
-		N: 1,
+		N: num1,
 	}
 
 	b := models.Number{
-		N: 2,
+		N: num2,
 	}
 
 	c := arythmetic.Sum(a, b)
